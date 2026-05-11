@@ -9,7 +9,7 @@ A typical VPS runs **multiple** TCP listeners (for example `127.0.0.1:3000` for 
 
 ## What ark-protocol specifies
 
-1. **Mux manifest v1** — JSON describing routes from a **public name** (or path/SNI key) to an **upstream** `host:port` and protocol hint. See [manifest.md](manifest.md) and `../spec/mux-manifest.v1.schema.json`.
+1. **Mux manifest v1** — JSON describing routes from a **public name** (or path/SNI key) to an **upstream** `host:port` and protocol hint. See [using-the-manifest.md](using-the-manifest.md) (how to use it end-to-end), [manifest.md](manifest.md), and `../spec/mux-manifest.v1.schema.json`.
 
 2. **Ingress discipline** — you run **one** TLS-terminated listener (or one Cloudflare Tunnel outbound socket) on the VPS; local software uses the manifest to decide which upstream receives each connection.
 

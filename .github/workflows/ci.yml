@@ -42,6 +42,6 @@ jobs:
         with:
           bun-version: "1.2.18"
 
-      - name: Bun tests (@tschk/mux-manifest)
-        working-directory: packages/mux-manifest
+      - name: Bun tests (@tschk/ark-protocol)
+        working-directory: packages/ark-protocol
         run: bun test

@@ -1,9 +1,9 @@
 [package]
-name = "mux-manifest"
+name = "ark-protocol"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "Mux manifest v1 helpers: build MUX_MANIFEST_JSON for edge workers from resolved environment."
+description = "Mux manifest v1: build MUX_MANIFEST_JSON for edge workers from resolved environment."
 repository = "https://github.com/tschk/ark-protocol"
 
 [dependencies]

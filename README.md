@@ -2,15 +2,17 @@
 
 **Open protocol and reference implementation** for presenting **many local ports on a VPS as one standardized HTTPS/WebSocket front** toward Cloudflare (or any TLS client). It is **not tied to Ark**: any control plane, script, or operator can adopt the [manifest](docs/manifest.md) and HTTP routes described here.
 
-This repository contains:
+**New here?** Read **[Using the manifest](docs/using-the-manifest.md)** — it walks through authoring JSON, validation, Worker bindings, Ark resolved env, and the Rust / JS packages in one place.
 
-| Artifact | Role |
-|----------|------|
-| [`spec/mux-manifest.v1.schema.json`](spec/mux-manifest.v1.schema.json) | Version **1** JSON Schema for how you **declare** internal host/port routes on a machine. |
-| [`crates/mux-manifest/`](crates/mux-manifest) | **Rust library** `mux-manifest`: `manifest_json_for_deploy` builds the Worker `MUX_MANIFEST_JSON` binding from resolved env (`MUX_MANIFEST_JSON` / `MUX_DEFAULT_UPSTREAM`). Depend via path or git from any Rust control plane or tool. |
-| [`packages/mux-manifest/`](packages/mux-manifest) | **JS library** [`@tschk/mux-manifest`](packages/mux-manifest) (ESM + `.d.ts`): `manifestJsonForDeploy` — same contract for **Bun**, **Node 18+**, or front-end tooling. Publish with `npm publish` from that directory when ready. |
-| [`docs/`](docs/) | Architecture, VPS deployment, Cloudflare integration, manifest field reference. |
-| [`worker/entry.mjs`](worker/entry.mjs) | Optional **Cloudflare Worker** module: canonical HTTP surface at **`/protocol/v1/…`** (legacy **`/__ark/…`** kept for compatibility). |
+This repository is laid out **by name under `ark-protocol`**:
+
+| Path | Role |
+|------|------|
+| [`spec/mux-manifest.v1.schema.json`](spec/mux-manifest.v1.schema.json) | Version **1** JSON Schema (file name keeps `mux-manifest` for stable `$id` URLs). |
+| [`crates/ark-protocol/`](crates/ark-protocol) | **Rust crate `ark-protocol`** — import as `ark_protocol`; **`manifest_json_for_deploy`** builds the Worker `MUX_MANIFEST_JSON` string from resolved env. |
+| [`packages/ark-protocol/`](packages/ark-protocol) | **npm `@tschk/ark-protocol`** (ESM + `.d.ts`) — **`manifestJsonForDeploy`** for **Bun** / **Node 18+**. |
+| [`docs/`](docs/) | Architecture, VPS, Cloudflare, manifest fields, worker bindings. |
+| [`worker/entry.mjs`](worker/entry.mjs) | Reference **Cloudflare Worker** (`/protocol/v1/…`, legacy `/__ark/…`). |
 
 ## Why
 
@@ -22,6 +24,7 @@ On a VPS you often run several processes (HTTP API, WebRTC signaling, game serve
 
 ## Quick links
 
+- [Using the manifest](docs/using-the-manifest.md) — **start here**: end-to-end usage (VPS, Worker, Ark, libraries).
 - [Overview](docs/overview.md) — goals and vocabulary.
 - [VPS deployment](docs/vps.md) — multi-port → single listener on your server.
 - [Cloudflare](docs/cloudflare.md) — tunnels, Workers, and how they attach to that single port.

@@ -1,12 +1,12 @@
 {
-  "name": "@tschk/mux-manifest",
+  "name": "@tschk/ark-protocol",
   "version": "0.1.0",
-  "description": "Build MUX_MANIFEST_JSON for ark-protocol edge workers from resolved environment (Node.js, Bun, browsers with URL + JSON).",
+  "description": "Mux manifest v1 helpers: build MUX_MANIFEST_JSON for edge workers from resolved environment (Bun, Node 18+).",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/tschk/ark-protocol.git",
-    "directory": "packages/mux-manifest"
+    "directory": "packages/ark-protocol"
   },
   "type": "module",
   "main": "./src/index.js",

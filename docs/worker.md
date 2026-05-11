@@ -39,6 +39,6 @@ The same behaviour is mirrored under `/__ark/adapter/...` and `/__ark/...` for b
 | `ARK_TCP_HOST` | Hostname for outbound TCP (Workers `connect`). |
 | `ARK_TCP_PORT` | Port string for outbound TCP. |
 
-Ark (and other control planes) may omit a useful manifest by binding `MUX_MANIFEST_JSON` to `"{}"`. If the resolved environment JSON embedded in `ARK_RESOLVED_ENV` includes **`MUX_MANIFEST_JSON`** (object or stringified object) or **`MUX_DEFAULT_UPSTREAM`** (a full URL such as `https://origin.example.com`), Ark’s deploy step can generate `MUX_MANIFEST_JSON` for the Worker automatically.
+Ark (and other control planes) may omit a useful manifest by binding `MUX_MANIFEST_JSON` to `"{}"`. If the resolved environment JSON embedded in `ARK_RESOLVED_ENV` includes **`MUX_MANIFEST_JSON`** (object or stringified object) or **`MUX_DEFAULT_UPSTREAM`** (a full URL such as `https://origin.example.com`), Ark’s deploy step can generate `MUX_MANIFEST_JSON` for the Worker automatically (same rules as the **`ark-protocol`** Rust crate and **`@tschk/ark-protocol`** JS package — see [using-the-manifest.md](using-the-manifest.md)).
 
 Implementations that are not Ark may set these to empty strings and rely only on adapter URLs, or fork the Worker with neutral names—the HTTP path layout remains stable.
