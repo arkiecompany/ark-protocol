@@ -7,6 +7,7 @@ This repository contains:
 | Artifact | Role |
 |----------|------|
 | [`spec/mux-manifest.v1.schema.json`](spec/mux-manifest.v1.schema.json) | Version **1** JSON Schema for how you **declare** internal host/port routes on a machine. |
+| [`crates/mux-manifest/`](crates/mux-manifest) | **Rust library** `mux-manifest`: `manifest_json_for_deploy` builds the Worker `MUX_MANIFEST_JSON` binding from resolved env (`MUX_MANIFEST_JSON` / `MUX_DEFAULT_UPSTREAM`). Depend via path or git from any Rust control plane or tool. |
 | [`docs/`](docs/) | Architecture, VPS deployment, Cloudflare integration, manifest field reference. |
 | [`worker/entry.mjs`](worker/entry.mjs) | Optional **Cloudflare Worker** module: canonical HTTP surface at **`/protocol/v1/…`** (legacy **`/__ark/…`** kept for compatibility). |
 
