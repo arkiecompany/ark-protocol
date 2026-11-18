@@ -17,4 +17,4 @@ A typical VPS runs **multiple** TCP listeners (for example `127.0.0.1:3000` for 
 
 ## Relationship to Ark
 
-[Ark](https://github.com/tschk/ark) is one consumer: it can upload this Worker and set bindings. Nothing in the manifest or route layout **requires** Ark. If you do not use Ark, use the manifest with your own reverse proxy (Caddy, nginx, HAProxy) or with `cloudflared` only—see [vps.md](vps.md) and [cloudflare.md](cloudflare.md).
+[Ark](https://github.com/atechnology-company/ark) is one consumer: it can upload this Worker and set bindings. Nothing in the manifest or route layout **requires** Ark. If you do not use Ark, use the manifest with your own reverse proxy (Caddy, nginx, HAProxy) or with `cloudflared` only—see [vps.md](vps.md) and [cloudflare.md](cloudflare.md).

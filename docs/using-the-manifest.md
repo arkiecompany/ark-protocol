@@ -57,7 +57,7 @@ Helpers that emit the same string Ark puts on the Worker:
 **From another repo (path):**
 
 ```toml
-ark-protocol = { git = "https://github.com/tschk/ark-protocol", branch = "main", package = "ark-protocol" }
+ark-protocol = { git = "https://github.com/arkiecompany/ark-protocol", branch = "main", package = "ark-protocol" }
 ```
 
 ```json

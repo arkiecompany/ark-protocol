@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/tschk/ark-protocol/spec/mux-manifest.v1.schema.json",
+  "$id": "https://github.com/arkiecompany/ark-protocol/spec/mux-manifest.v1.schema.json",
   "title": "mux-manifest",
   "type": "object",
   "additionalProperties": false,
